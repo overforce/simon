@@ -1,3 +1,105 @@
-@import 'base/_mixins'
-@import 'base/_reset'
-@import 'base/_fonts'
+body
+	display: flex
+	justify-content: center
+	font-family: 'arial'
+
+.reset
+	font-size: 40px
+	color: rgba(#000000,.6)
+	padding: 0px 5px
+	cursor: pointer
+	position: absolute
+	margin-left: 275px
+	transform: rotate(90deg)
+	user-select: none
+	transition: color .2s
+	&:hover
+		color: rgba(#000000,.8)
+
+.home
+	font-size: 22px
+	text-decoration: none
+	color: #111111
+	position: absolute
+	top: 20px
+	left: 40px
+
+.game
+	margin-top: 50px
+	display: grid
+	grid-template-rows: repeat(2,150px)
+	grid-template-columns: repeat(2,150px)
+	grid-gap: 20px
+	background: #212121
+	border-radius: 50%
+	padding: 20px
+
+.game > a
+	cursor: pointer
+	transition: .2s
+	&:hover
+		filter: brightness(0.9)
+	&:active
+		filter: brightness(0.8)
+
+.active
+	filter: brightness(1.6)
+
+.red
+	border-top-left-radius: 100%
+	background: #EE423E
+
+.green
+	border-top-right-radius: 100%
+	background: #73BF45
+
+.blue
+	border-bottom-left-radius: 100%
+	background: #00ADAE
+
+.yellow
+	border-bottom-right-radius: 100%
+	background:#5D3097
+
+.start
+	margin-top: 200px
+	position: absolute
+	font-size: 32px
+
+	cursor: pointer
+	color: rgba(#ffffff,1)
+	transition: color .2s
+	&:hover
+		color: rgba(#ffffff,.8)
+
+
+
+.back
+	position: absolute
+	height: 350px
+	width: 350px
+	margin-top: 60px
+	border-radius: 50%
+	background: rgba(#333333,.5)
+	filter: blur(10px)
+.blur
+	position: absolute
+	height: 500px
+	width: 500px
+	backdrop-filter: blur(4px)
+
+
+.hid
+	transition: .3s
+	visibility: hidden
+	opacity: 0
+
+.vis
+	opacity: 1
+	visibility: visible
+
+.score
+	position: absolute
+	font-size: 40px
+	top: 20px
+	margin-left: 350px
